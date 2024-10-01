@@ -1,0 +1,24 @@
+:root{
+  --font-1 : "Harmattan", sans-serif;
+  --font-2:"Katibeh", serif;
+  --font-3: "Amiri", serif;
+  --font-4:"Scheherazade New", serif;
+  --font-5:"Jomhuria", serif;
+  --color-bg:linear-gradient(294deg, rgba(255, 255, 0, 1) 0%, rgba(11, 8, 39, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  --color-footer: #010408;
+  --color-blog: #81c3dd;
+  --color-subtext: #ff71d4;
+  --color-0:rgb(14, 14, 14);
+  --color-1:rgba(255, 253, 253, 1);
+  --color-2:rgb(10, 118, 250);
+  --color-3:rgba(0, 0, 0, 0.387);
+  --color-4:rgba(187, 167, 167, 0.29);
+  --color-5:rgba(255, 255, 255, 0.75) ; 
+  --color-6:rgba(0, 0, 0, 0.428);
+  --color-7:rgb(34, 34, 34);
+  --color-8:rgba(187, 167, 167, 0.555);
+  --color-9:rgba(0, 0, 0, 0.25);
+  --color-10:rgba(0, 0, 0, 0.7);
+  --gradient-text:  linear-gradient(90deg, rgba(2, 193, 255, 1) 0%, rgba(4, 205, 145, 1) 51%, rgba(238, 9, 133, 1) 98%);
+}
+

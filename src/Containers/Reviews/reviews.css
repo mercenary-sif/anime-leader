@@ -1,0 +1,217 @@
+.Leader__reviews{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: linear-gradient(18deg, rgba(0, 0, 0, 1) 0%, rgb(14, 13, 12) 49%, rgba(0, 0, 0, 0.95) 100%);
+}
+
+.Leader__reviews-heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 1rem;
+}
+.Leader__reviews-heading img{
+    width: 30px;
+    height: 65px;
+    margin-top: -2rem;
+}
+.Leader__reviews-heading h1{
+    font-family: var(--font-2);
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 1rem;
+    color: #eee4e0;
+}
+.Leader__reviews-mangareviews{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.Leader__reviews-episodesreviews__heading,
+.Leader__reviews-mangareviews__heading{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+.Leader__reviews-episodesreviews__heading h2 ,
+.Leader__reviews-mangareviews__heading h2{
+    font-family: var(--font-5);
+    font-weight: normal;
+    font-style: italic;
+    font-size: 38px;
+    line-height: 40px;
+    margin-bottom: 1rem;
+    color: #eee4e0;
+}
+.Leader__reviews-mangareviews__heading img{
+    width: 40px;
+    height: 45px;
+    transform: skew(-20deg); 
+    margin-top: -2rem;
+}
+.Leader__reviews-episodesreviews__heading div,
+.Leader__reviews-mangareviews__heading div{
+    position: absolute;
+    top: 4rem;
+    width: 275px;
+    height: 2px; 
+    margin-top: -2px;
+    background-color:  #ffffff;;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.Leader__reviews-mangareviews__groupA{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+.Leader__reviews-mangareviews__groupA-bestreview{
+    flex: 0.75;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.Leader__reviews-mangareviews__groupA-bestreview  .Leader__toparticle{
+    min-height: 520px;
+}
+.Leader__reviews-mangareviews__groupA-bestreview  .Leader__toparticle h3{   
+    font-size: 30px;
+    line-height: 45px;
+}
+
+.Leader__reviews-mangareviews__groupA-topreviews{
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    row-gap: 0.5rem;
+}
+.Leader__reviews-mangareviews__groupA-topreviews  .Leader__toparticle{
+    min-height: 255px;
+}
+.Leader__reviews-mangareviews__groupB  .Leader__toparticle h3,
+.Leader__reviews-mangareviews__groupA-topreviews  .Leader__toparticle h3{   
+    font-size: 26px
+}
+.Leader__reviews-mangareviews__groupB{
+    display: grid;
+    direction: rtl;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    row-gap: 0.5rem;
+}
+.Leader__reviews-mangareviews__groupB  .Leader__toparticle{
+    min-height: 300px;
+    direction: ltr;
+}
+.Leader__reviews-episodesreviews{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+.Leader__reviews-episodesreviews__heading{
+    padding: 1rem;
+}
+.Leader__reviews-episodesreviews__heading img{
+    width: 35px;
+    height: 85px;
+    transform: skew(-20deg); 
+    margin-top: -3rem;
+}
+.Leader__reviews-episodesreviews__groupA{
+    display: flex;
+    flex-direction: row;
+    direction: rtl;
+    gap: 1rem;
+}
+.Leader__reviews-episodesreviews__groupA-bestreview{
+    flex: 1;
+    display: flex;
+  
+}
+
+.Leader__reviews-episodesreviews__groupA-bestreview .Leader__toparticle-content{
+   max-height: 300px;
+   direction: ltr;
+} 
+
+.Leader__reviews-episodesreviews__groupA-bestreview .Leader__toparticle h3{   
+    font-size: 30px;
+    line-height: 45px;
+}
+.Leader__reviews-episodesreviews__groupA-top{
+    flex: 0.75;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+.Leader__reviews-episodesreviews__groupA-top .Leader__latestarticle{
+    min-width: 100%;
+}
+.Leader__reviews-episodesreviews__groupB{
+    display: grid;
+    direction: rtl;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    row-gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width : 1090px){
+    .Leader__reviews-mangareviews__groupA{
+        flex-direction: column;
+    }
+    .Leader__reviews-episodesreviews__groupA{
+        flex-direction: column;
+    }
+    .Leader__reviews-episodesreviews__groupA-bestreview .Leader__toparticle{
+        min-height: 500px;
+    }
+    .Leader__reviews-episodesreviews__groupA-bestreview .Leader__toparticle-content{
+        max-height: 300px;
+        direction: ltr;
+     } 
+     .Leader__reviews-episodesreviews__groupA-top{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .Leader__reviews-episodesreviews__groupA-top .Leader__latestarticle{
+        min-height: 250px;
+    }
+    .Leader__reviews-episodesreviews__groupA-top  .Leader__latestarticle-content{
+        min-height: 250px;
+    }
+    .Leader__reviews-episodesreviews__groupA-top .Leader__latestarticle-image img{
+        min-height: 250px;
+    }
+}
+@media screen and (max-width : 950px){
+    .Leader__reviews-mangareviews__groupB{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .Leader__reviews-episodesreviews__groupA-top,
+    .Leader__reviews-episodesreviews__groupB{
+        grid-template-columns: repeat(1,1fr);
+        gap: 1rem;
+      
+    }
+    
+}
+@media screen and (max-width : 550px){
+    .Leader__reviews-mangareviews__groupA-topreviews,
+    .Leader__reviews-mangareviews__groupB{
+        grid-template-columns: repeat(1,1fr);
+    }
+   
+}

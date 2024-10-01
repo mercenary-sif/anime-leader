@@ -1,0 +1,199 @@
+.Leader__card{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.Leader__card-pic{
+   position: absolute;
+   top: 0;
+   width: 100%;
+   height: 100vh;
+   z-index: -2;
+   mask-image: linear-gradient(to right top , transparent , black 85% );
+   -webkit-mask-image: linear-gradient(to right top , transparent , black 85% );
+}
+.Leader__card-pic img{
+    width: 100vw;
+    height: 100vh;
+    object-fit: fill;
+    
+}
+
+.Leader__card-pic::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 88;
+    background-image: linear-gradient(to right bottom , rgba(0,0,0,0.7), rgba(0,0,0,0.6), rgba(0,0,0,0.5)
+    , rgba(0,0,0,0.4), rgba(0,0,0,0 ));
+}
+
+.Leader__card-container{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    padding: 4rem 6rem;
+    bottom: 0;
+}
+
+.Leader__card-container h1{
+    font-family: var(--font-3);
+    font-weight: 800;
+    font-size: 55px;
+    line-height: 70px;
+    letter-spacing: -0.1rem;
+}
+
+.Leader__card-container p{
+    font-family: var(--font-3);
+    color: #eee4e0;
+    text-align: center;
+    direction: rtl;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 40px;
+    max-height: 4.5em;
+    overflow: hidden;
+    margin:  1.5rem  2rem;
+}
+.Leader__card-container h2 {
+    font-family: var(--font-3);
+    color: var(  --color-5);
+    font-size: 35px;
+    direction: rtl;
+    line-height: 40px;
+    font-weight: 300;
+    margin:  1rem 0 ;
+}
+
+.Leader__card-container h3 {
+    font-family: var(--font-2);
+    color: white;
+    font-size: 25px;
+    line-height: 28px;
+    font-weight: 300;
+    margin:  2rem 0 ;
+}
+
+.Leader__card-container_btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0 1rem;
+    padding: 1rem 0;
+    gap: 10px;
+    
+}
+
+.Leader__card-container_btns button{
+    position: relative;
+    width: 250px; 
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    margin: 0 1rem;
+    outline: none;
+    color: #fff;
+    font-family: var(--font-2);
+    font-weight: 500;
+    font-size: 22px;
+    background: linear-gradient(90deg, rgb(0, 190, 212) 0%, rgba(4, 82, 205, 0.839) 50%, rgb(238, 9, 133) 98%);;
+   border-radius: 5px;
+    border:  none;
+    outline: none;
+    cursor: pointer;
+    gap: 10px;
+}
+
+
+
+.Leader__card-container_btns button img{
+    width: 50px;
+    height: 30px;
+    
+}
+
+
+@media screen and (max-width : 1020px){
+   
+.Leader__card-container h1{
+    font-size: 35px;
+    line-height: 45px;
+}
+
+.Leader__card-container p{
+   
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.Leader__card-container h2{
+    font-family: var(--font);
+    color: var( --color-subtext);
+    font-size: 18px;
+    line-height: 22px;
+}
+
+}
+
+@media screen and (max-width : 850px){
+    .Leader__card-container_btns{
+
+        display: flex;
+        flex-direction: column;
+    }
+    .Leader__card-container p{
+   
+        font-size: 16px;
+        line-height: 24px;
+        margin-right:   1rem ;
+    }
+   
+}
+
+
+@media screen and (max-width : 550px){
+    .Leader__card{
+        height: 80vh;
+    }
+    .Leader__card-container{
+        width: 100%;
+    }
+    .Leader__card-container h1{
+        font-size: 26px;
+        line-height: 35px;
+    }
+    
+    .Leader__card-container p{
+       margin-right: 0;
+        font-size: 13px;
+        line-height: 20px;
+        margin-right:   0 ;
+        max-height: 9em;
+        overflow: hidden;
+    }
+    
+    .Leader__card-container h2{
+        font-family: var(--font);
+        color: var( --color-subtext);
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .Leader__card-container_btns{
+        gap: 10px;
+    }
+    .Leader__card-container_btns button{
+     
+        font-size: 11px;
+       
+    }
+    }

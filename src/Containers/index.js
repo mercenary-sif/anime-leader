@@ -1,0 +1,6 @@
+export {default as Header} from './Header/Header'
+export {default as News} from './News/News'
+export {default as Articles} from './Articles/Articles'
+export {default as Theories} from './Theories/Theories'
+export {default as Reviews} from './Reviews/Reviews'
+export {default as Footer} from './footer/Footer'
