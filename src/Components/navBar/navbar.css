@@ -96,7 +96,15 @@
 .Leader__navbar-menu_container-links_sing{
     display: none;
 }
-
+.Leader__navbar-menu_container-links_sing-icons{
+    font-size: 25px;
+    margin: 0 1rem;
+    color: #fff; 
+    cursor: pointer; 
+}
+.Leader__navbar-menu_container-links_sing-icons:hover{
+    color: var(--color-blog);
+}
 @media screen and (max-width : 1050px){
     .Leader__navbar-links_container{
         display: none;
@@ -111,6 +119,9 @@
     .Leader__navbar{
         padding: 2rem 4rem;
     }  
+    .Leader__navbar-menu_container-links_sing-icons{
+        margin: 1rem;
+    }
 }
 
 @media screen and (max-width : 550px){
@@ -126,4 +137,5 @@
     .Leader__navbar-menu_container-links_sing{
         display: block;
     }
+ 
 }

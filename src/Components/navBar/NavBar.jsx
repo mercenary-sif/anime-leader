@@ -2,7 +2,11 @@ import './navbar.css'
 import React, { useState } from 'react'
 import logo from '../../images/logo 3.png'
 import { RiMenu3Line , RiCloseLine } from 'react-icons/ri'
-const Menu = () => {
+import { useNavigate } from 'react-router-dom'
+import { RiBookmarkFill  } from 'react-icons/ri'
+import { FaUserCircle } from "react-icons/fa";
+import { MdFavorite } from "react-icons/md";
+const HomeMenu = () => {
     return(
      <>
        <p><a href='#home'>الرئيسية</a></p>
@@ -14,9 +18,41 @@ const Menu = () => {
     
     </>)
    };
-
-const NavBar = () => {
-    const [menu , setMenu]= useState(false)
+const Menu = () => {
+    return(
+     <>
+       <p><a href='/'>الرئيسية</a></p>
+       <p><a href='#news'> قائمة الأخبار</a></p>
+       <p><a href='#articles'> قائمة المقالات</a></p>
+       <p><a href='#theories'> قائمة النظريات</a></p>
+       <p><a href='#reviews'> قائمة الانطباعات</a></p>
+       <p><a href='#aboutas'>معلومات عنا</a></p>
+    
+    </>)
+   };   
+const AuthMenu = () => {
+    return(
+     <>
+       <p><a href='/'>الرئيسية</a></p>
+       <p><a href='#aboutas'>معلومات عنا</a></p>
+    
+    </>)
+   };
+const MenuIcons = () => {
+    return(
+     <>
+    <FaUserCircle className='Leader__navbar-menu_container-links_sing-icons'/> 
+    <RiBookmarkFill className='Leader__navbar-menu_container-links_sing-icons'/>
+    <MdFavorite className='Leader__navbar-menu_container-links_sing-icons'/>
+    </>)
+   };   
+const NavBar = ({auth , registerition , detailes}) => {
+    const [menu , setMenu]= useState(false);
+    const navigate  = useNavigate();
+    function NavgatTo(type){
+      if(type==='singin'){navigate(`/auth`);}
+      else{navigate(`/registerition`);}
+  }
   // BEM --> Block Element Modifier
   return (
     <div className='Leader__navbar'>
@@ -25,12 +61,35 @@ const NavBar = () => {
             <img src={logo} alt='logo' />
           </div>
           <div className="Leader__navbar-links_container">
-          <Menu/>
+          {auth || registerition ? <AuthMenu/> : detailes ? <Menu/> : <HomeMenu/>}
           </div>
           </div>
           <div className='Leader__navbar-sing'>
-            <p>تسجيل الدخول</p>
-            <button type='button'>انشاء حساب جديد</button>
+          {  detailes ?
+                 <>
+                 <MenuIcons/>
+                 </>
+                 : 
+                 <>
+                 { auth  ?
+                <>
+                <button  type='button' onClick={()=> NavgatTo()}>انشاء حساب جديد</button>
+                </>:
+                <>
+                {
+                  registerition ?
+                  <>
+                  <p onClick={()=> NavgatTo('singin')}  >تسجيل الدخول</p>
+                  </>
+                  :
+                  <>
+                  <p onClick={()=> NavgatTo('singin')}  >تسجيل الدخول</p>
+                  <button  type='button'onClick={()=> NavgatTo('singup')}>انشاء حساب جديد</button>
+                  </>
+                }
+                
+                </>}
+            </>}
           </div>
           <div className='Leader__navbar-menu'>
             {
@@ -43,11 +102,34 @@ const NavBar = () => {
               menu &&
               <div className='Leader__navbar-menu_container scale-up-center'>
                 <div className='Leader__navbar-menu_container-links'>
-               <Menu/>
+                {auth || registerition ? <AuthMenu/> : detailes ? <Menu/> :  <HomeMenu/>}
                 </div>
                 <div className='Leader__navbar-menu_container-links_sing'>
-                  <p>تسجيل الدخول</p>
-                  <button type='button'>انشاء حساب جديد</button>
+                 { detailes ?
+                 <>
+                  <MenuIcons/>
+                 </>
+                 : 
+                 <>
+                 { auth ?
+                    <>
+                    <button  type='button'>انشاء حساب جديد</button>
+                    </>:
+                    <>
+                    {
+                      registerition ?
+                      <>
+                      <p onClick={()=> NavgatTo('singin')}  >تسجيل الدخول</p>
+                      </>
+                      :
+                      <>
+                      <p onClick={()=> NavgatTo('singin')}  >تسجيل الدخول</p>
+                      <button  type='button'onClick={()=> NavgatTo('singup')}>انشاء حساب جديد</button>
+                      </>
+                    }
+                    </> }
+                    </>
+                    }
                 </div>
               </div>
               

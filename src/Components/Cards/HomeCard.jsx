@@ -1,7 +1,12 @@
 import React from 'react'
 import './homecard.css'
 import read from '../../images/Readnow.png'
+import { useNavigate } from 'react-router-dom';
 const HomeCard = ({imageUrl , Episode , anime , Introduction , Title , Publication}) => {
+  const navigate  = useNavigate();
+  function NavgatTo(){
+    navigate(`/articledetailes/1/`);
+}
   return (
     <div className='Leader__card'>
       <div className="Leader__card-pic">
@@ -18,7 +23,7 @@ const HomeCard = ({imageUrl , Episode , anime , Introduction , Title , Publicati
         </h3>
         <div className="Leader__card-container_btns">
        
-       <button type='button'>
+       <button type='button' onClick={() => NavgatTo()} >
          <img src={read} alt="read" />
          قراءة </button>
        </div>

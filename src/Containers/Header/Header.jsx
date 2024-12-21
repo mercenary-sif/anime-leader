@@ -2,7 +2,7 @@ import './header.css'
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { opz , nodet , kutsho , unohana, nobara } from './import';
+import { opz , nodet , kutsho , unohana, nobara, sokunaVSgojo } from './import';
 import { Homecard } from '../../Components';
 
 const data =[
@@ -23,6 +23,14 @@ const data =[
     'Cover': nodet
   },
   {
+    'Anime': 'Jujitsu Kaisen',
+    'Episode': '07',
+     'Publication': 'Article',
+    'Title': ' -افضل القتالات في عالم الأنمي لا يكون البطل طرفا بها !',
+    'Introduction': '- المواجهات الصراعات و الاحتدامات هي جوهر الشونين و من المعايير التي ترفع صيت الاعمال بقوة هي جودة القتالات بها لكن العديد من الاعمال او بشكل ادق المؤلفين يرمون انفسهم في حلقة نمطية جدا عندما يأتي الامر لمواجهة العدو الأبرز في القصة و غالبا يكون ذلك الاسم طاغي المستوى و بعيد جدا عن البطل و رفاقه مما يجعل فكرة سقوط شخصية بهذا الوزن الثقيل بعد تقديم اداء كامل و حرق كل ما بجعبته تحديا عظيما لمؤلف القصة عليه اجتيازه خاصة عندما يدخل لحلقة النمطية المتكررة في قصص الشونين ، نمطية مركزها بطل القصة و عنوانها " يجب ان يسقط العدو و الفيلان الرئيسي على يده " هذه النمطية تجعل القتالات المتقدمة في القصة ضد الاسم الأثقل في العمل كله تتدهور من الجيد الى السيء ختاما فالأسوء و الامثلة عديدة جدا : منها مادارا في انمي ناروتو ، كايدو في أنمي ون بيس ، موزان من انمي قاتل الشياطين و القائمة لازالت مستمرة !',
+    'Cover': sokunaVSgojo
+  },
+    {
     'Anime': 'kemitsunoyaiba S4 ',
     'Episode': '3',
     'Publication': 'Review ep',
