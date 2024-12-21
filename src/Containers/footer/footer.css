@@ -1,0 +1,103 @@
+.Leader__footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+    background: var(--color-footer);
+}
+
+.Leader__footer-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    text-align: left;
+}
+.Leader__footer-links div{
+    width: 250px;
+    margin: 1rem;
+}
+
+.Leader__footer-links_logo{
+    display: flex;
+    flex-direction: column;
+}
+
+.Leader__footer-links_logo img{
+    width: 120px;
+    height: 90px ;
+    margin-bottom: 1rem;
+}
+
+.Leader__footer-links_logo p{
+    font-family: var(--font-4);
+    font-size: 15px;
+    text-align: start;
+    line-height: 22px;
+    color: #ffffff;
+}
+.Leader__footer-links_logo_div {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: start;   
+}
+.Leader__footer-links_logo_div h4{
+    font-family: var(--font-2);
+    font-size: 22px;
+    font-weight: 100;
+    line-height: 24px;
+    color: #ffffff;
+    margin-bottom: 1rem;    
+}
+.Leader__footer-links_logo_div p{
+    font-family: var(--font-4);
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+   
+    margin: 0.5rem 0;   
+    cursor: pointer; 
+}
+.Leader__footer-links_logo_div p:hover{
+    color: var(--color-blog);
+}
+
+.Leader__footer-copyright{
+    margin-top: 2rem;
+    direction: ltr;
+    text-align: center;
+    width: 100%;
+}
+.Leader__footer-copyright p{
+    font-family: var(--font-4);
+    font-size: 14px;
+    line-height: 14px;
+    color: #ffffff  ;
+}
+
+@media screen and (max-width : 850px){
+    .Leader__footer-heading h1{
+        font-size: 40px;
+        line-height: 50px;
+    }   
+}
+
+@media screen and (max-width : 550px){
+    .Leader__footer-heading h1{
+        font-size: 28px;
+        line-height: 35px;
+    }   
+    .Leader__footer-links_logo div{
+        margin: 1rem 0;
+    }
+    .Leader__footer-btn p{
+        font-size: 12px;
+        line-height: 16px;
+    } 
+}
+
+

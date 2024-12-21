@@ -1,0 +1,78 @@
+.Leader_rate{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    direction: rtl;
+    height: 40vh;
+    background: linear-gradient(18deg, rgba(0, 0, 0, 1) 0%, rgb(14, 13, 13) 49%, rgba(0, 0, 0, 0.94) 100%);
+}
+
+.Leader_rate-header{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.Leader_rate-header h3{
+    font-family: var(--font-2);
+    font-size: 32px;
+    text-align: center;
+    font-weight: 200;
+    line-height: 38px;
+    color: #eee4e0;
+    margin-bottom: 1rem;
+}
+.Leader_rate-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8rem;
+  margin: 3rem;
+}
+.Leader_rate-container-choices{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #eee4e0;
+}
+.Leader_rate-container-choices p{
+    font-family: var(--font-2);
+    direction: rtl;
+    font-size: 26px;
+    text-align: start;
+    font-weight: 200;
+    line-height: 24px;
+}
+.Leader_rate-container-choices_icons{
+    font-size: 35px;
+}
+.Leader_rate-container-choices:hover{
+    color: var(--color-blog);
+    cursor: pointer;
+}
+
+@media screen and (max-width : 650px){
+    .Leader_rate-header h3{
+        font-size: 26px;
+        line-height: 35px;
+        margin-bottom: 0.25rem;
+    }
+    .Leader_rate-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5rem;
+        margin: 2rem;
+      }
+      .Leader_rate-container-choices p{
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .Leader_rate-container-choices_icons{
+        font-size: 20px;
+    }
+}

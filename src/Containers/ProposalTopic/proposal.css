@@ -1,0 +1,218 @@
+.Leader__proposal{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--color-9);
+}
+.Leader__proposal-header{
+    display: flex;
+    flex-direction: row;
+    direction: rtl;
+    justify-content: start;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 1rem;
+}
+.Leader__proposal-header img{
+    width: 50px;
+    height: 45px;
+}
+.Leader__proposal-header h1{
+    font-family: var(--font-2);
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 1rem;
+    color: #eee4e0;;
+}
+.Leader__proposal-container{
+    width: 100%;
+    height: 60vh;
+   
+}
+.Leader__proposal-container .Proposal-slide{
+    position: relative;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+
+.Leader__proposal-container .Leader__toparticle{
+    min-height:60vh ;
+    max-width: 95%;
+}
+.Leader__proposal-container .Leader__toparticle-content{
+    min-height: 40vh;
+}
+.Leader__proposal-container .Leader__toparticle-content h3{
+    font-size: 24px;
+    text-align: center;
+    max-height: 5em;
+    line-height: 30px;
+}
+.Leader__proposal-container .Leader__toparticle-content-details_content p{
+    font-size: 12px;
+    line-height: 22px;
+}
+.Proposal-slide .slick-arrow.slick-next,
+.Proposal-slide .slick-arrow.slick-prev{
+position: absolute;
+height:100%;
+width: 5%;
+display: flex;
+align-items: center;
+justify-content:space-evenly;
+z-index: 1000;
+opacity: 0.8;
+}
+.slick-prev::before,.slick-next::before{
+   display:none;
+} 
+.Proposal-slide .slick-arrow.slick-prev{
+    left: -1%;
+}
+.Proposal-slide .slick-arrow.slick-next{
+    right: 0%;
+}
+.arrow{
+background-color: rgba(0, 0, 0, 0.255);
+}
+.arrow:hover {
+    background-color: black;
+}
+.Proposal-slide  .arrow img{
+    position: fixed;
+    top: 45%;
+    transform: translateY(-50%);
+    width: 50px; 
+    height: 90px; 
+    cursor: pointer;
+  }
+
+  .Leader__Suggestions{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .Leader__Suggestions-header{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 1rem;
+}
+.Leader__Suggestions-header img{
+    width: 50px;
+    height: 45px;
+}
+.Leader__Suggestions-header h1{
+    font-family: var(--font-2);
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 1rem;
+    color: #eee4e0;;
+}
+.Leader__Suggestions-container{
+    display: flex;
+    flex-direction: column;
+    
+}
+.Leader__Suggestions-container .Leader__latest {
+    direction: ltr;
+}
+
+.Leader__Suggestions-container .Leader__latest-image img{
+    min-height: 120px;
+    max-height: 125px;
+}
+
+.Leader__nwes_proposal-container{
+    display: grid;
+    direction: rtl;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 1rem;
+}
+
+.Leader__nwes_proposal-container .Leader__topnews{
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    max-height: 400px;
+}
+.Leader__nwes_proposal-container .Leader__topnews-image img{
+   max-height: 175px;
+}
+  @media screen and (max-width : 1050px){
+   .Leader__proposal-container{
+      
+        height: 40vh;
+          }
+          .Leader__proposal-container .Leader__toparticle{
+            min-height: 25vh;
+            max-height:40vh ;
+        } 
+          .Proposal-slide .arrow img{
+            top: 45%;
+          }  
+     .Leader__nwes_proposal-container{
+        grid-template-columns: repeat(3 , 1fr);
+       
+        }      
+    
+  }  
+  @media screen and (max-width : 850px){
+    .Leader__nwes_proposal-container{
+        grid-template-columns: repeat(2 , 1fr);
+       
+        } 
+  }
+  @media screen and (max-width : 650px){
+   .Leader__proposal-container{
+      
+        height: 35vh;
+          }
+          .Leader__proposal-container .Leader__toparticle{
+            min-height: 30vh;
+            max-height:35vh ;
+        } 
+        .Leader__proposal-container .Leader__toparticle-content{
+            min-height: 20vh;
+        }
+        .Leader__proposal-container .Leader__toparticle-content h3{
+            font-size: 16px;
+            max-height: 3em;
+            line-height: 26px;
+        }
+        .Leader__proposal-container .Leader__toparticle-content-details_content p{
+            font-size: 8px;
+            line-height: 17px;
+        }
+          .Proposal-slide .arrow img{
+            width: 30px; 
+            height: 70px; 
+          }  
+              
+          .Proposal-slide .slick-arrow.slick-prev{
+            left: -6%;
+        }
+       
+  }  
+  @media screen and (max-width : 550px){
+    .Leader__nwes_proposal-container{
+        grid-template-columns: repeat(1 , 1fr);
+       
+        }
+        .Leader__Suggestions-header img{
+            width: 40px;
+            height: 22px;
+        }
+        .Leader__Suggestions-header h1{
+            font-size: 22px;
+            line-height: 26px;
+            margin: 0;
+        } 
+  }
